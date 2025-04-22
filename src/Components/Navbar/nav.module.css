@@ -94,3 +94,11 @@
    border-radius:10px;
    
 }
+.image-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+

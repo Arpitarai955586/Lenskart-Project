@@ -46,6 +46,7 @@ import ContactGlassCard from "./ContactGlassCard";
 import SceanGlassCard from "./SceanGlassCard";
 import KidsGlassCard from "./KidsGlassCard";
 import ReaderGlassCard from "./ReaderGlassCard";
+import { AiFillAppstore } from "react-icons/ai";
 // import {  Grid, Center } from "@chakra-ui/react";
 
 function Nav() {
@@ -588,25 +589,6 @@ const items = [
           </Drawer>
         </Box>
       </HStack>
-      {/* <Box  class={style.searchbar}
-       w={{ base: "95%", sm: "70%", }}
-      display={{ base: "block", md: "none" }}
-     border="1px solid black "
-     m="2"
-     postion="sticky"
-     bottom="0"
-     borderRadius="10"
-     justifyContent="center"
-     alignitems="center"
-     
-     >
-    
-   <input type="text" placeholder="enter the no " class={style.input}/>
-   <div class={style.AccordionIcon}>
-   <IoSearch size={25} />
-   <FaInstagram  size={20}/>
-   </div>
-   </Box> */}
     <Box
       className={style.searchbar}
       w={{ base: "95%", sm: "70%" }}
@@ -634,13 +616,106 @@ const items = [
         />
 
         {/* Right Icon */}
-        <FaInstagram size={20} />
+        <FaInstagram  size={25} />
       </Flex>
     </Box>
     <Box>
-    <Tabs defaultActiveKey="1" items={items} onChange={onChange} />;
+    <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
     </Box>
+     <Box style={{  display:"flex",justifyContent:"center" ,textAlign:"center", gap:"20px", marginTop:"10px"}} >
+       <div style={{width:"120px" ,height:"50px" ,borderRadius:"12px",border:"1px solid black",boxShadow: "0px 2px 5px rgba(0,0,0,0.10)" }}> 
+       <text>
+        {/* <AiFillAppstore /> */}
+        Buy at <br/> 
+          <span  style={{color:"blue"}} >Home</span></text>
+       </div>
+       <div style={{width:"120px" ,height:"50px" ,border:"1px solid black",borderRadius:"12px" ,boxShadow: "0px 2px 5px rgba(0,0,0,0.10)"}}> 
+       <text>try at <br/> 
+          <span style={{color:"blue"}} >Home</span></text>
+       </div>
+       
+       <div style={{width:"120px" ,height:"50px" ,border:"1px solid black",borderRadius:"12px" ,boxShadow: "0px 2px 5px rgba(0,0,0,0.10)"}}>
+         <text>Buy on <br/> 
+          <span  style={{color:"blue"}} >Home</span></text>
+      </div>
+   </Box>
+
+    <Box style={{
+  overflowX: "auto",
+  display: "flex",
+  gap: "20px",
+  padding: "10px",
+  scrollBehavior: "smooth",
+  width: "520px",
+  marginTop:"30px",
+}}>
+  <li style={{
+    width: "250px",
+    height: "250px",
+    listStyleType: "none",
+    objectFit: "cover",
+     flex: "0 0 auto"
     
+  }}>
+     <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" style={{
+         width: "100%",
+         height: "100%",
+       objectFit: "cover",
+      
+    }} />
+  </li>
+  <li style={{
+    width: "250px",
+    height: "250px",
+    listStyleType: "none",
+    flex: "0 0 auto"
+  }}>
+    <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt=""
+     style={{
+        width: "100%",
+       height: "100%",
+       objectFit: "cover",
+       paddingTop: "-30px"
+      
+    }} 
+     />
+  </li>
+  <li style={{
+    width: "250px",
+    height: "250px",
+    listStyleType: "none",
+    flex: "0 0 auto",
+   
+  }}>
+    <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" 
+     style={{
+      width: "100%",
+       height: "100%",
+       objectFit: "cover",
+      
+    }}
+    />
+  </li>
+  <li style={{
+    width: "250px",
+    height: "250px",
+    listStyleType: "none",
+    flex: "0 0 auto",
+    
+  }}>
+    <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt=""   
+     style={{
+       width: "100%",
+       height: "100%",
+       objectFit: "cover",
+      
+    }}
+
+     />
+  </li>
+</Box>
+
+      
     </Box>
   );
 }
