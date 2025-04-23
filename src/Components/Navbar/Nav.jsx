@@ -47,6 +47,7 @@ import SceanGlassCard from "./SceanGlassCard";
 import KidsGlassCard from "./KidsGlassCard";
 import ReaderGlassCard from "./ReaderGlassCard";
 import { AiFillAppstore } from "react-icons/ai";
+import AllCard from "./AllCard";
 // import {  Grid, Center } from "@chakra-ui/react";
 
 function Nav() {
@@ -68,7 +69,7 @@ const items = [
         All
       </span>
     ),
-    // children:<NavFooter/>
+    children:<AllCard/>
   },
   {
     key: '2',
@@ -622,11 +623,11 @@ const items = [
     <Box>
     <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
     </Box>
-     <Box style={{  display:"flex",justifyContent:"center" ,textAlign:"center", gap:"20px", marginTop:"10px"}} >
+     {/* <Box style={{  display:"flex",justifyContent:"center" ,textAlign:"center", gap:"20px", marginTop:"10px"}} >
        <div style={{width:"120px" ,height:"50px" ,borderRadius:"12px",border:"1px solid black",boxShadow: "0px 2px 5px rgba(0,0,0,0.10)" }}> 
        <text>
         {/* <AiFillAppstore /> */}
-        Buy at <br/> 
+        {/* Buy at <br/> 
           <span  style={{color:"blue"}} >Home</span></text>
        </div>
        <div style={{width:"120px" ,height:"50px" ,border:"1px solid black",borderRadius:"12px" ,boxShadow: "0px 2px 5px rgba(0,0,0,0.10)"}}> 
@@ -713,8 +714,8 @@ const items = [
 
      />
   </li>
-</Box>
-
+</Box> */} 
+ 
       
     </Box>
   );
