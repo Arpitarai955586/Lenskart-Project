@@ -28,10 +28,18 @@ import {
 import { Image, Box } from "@chakra-ui/react";
 const Home = () => {
   return (
-    <Box>
+    <Box >
       <Navbar />
-      <HomeCard type={HomeDetails} />
-      <HomeCard1 type={HomeDetails1} />
+      {/* <HomeCard type={HomeDetails}  /> 
+      <HomeCard1 type={HomeDetails1}  /> */}
+      <Box display={{ base: "none", md: "block" }}>
+       <HomeCard type={HomeDetails} />
+     </Box>
+
+   <Box display={{ base: "none", md: "block" }}>
+     <HomeCard1 type={HomeDetails1} />
+  </Box>
+ <Box display={{ base: "none", md: "block" }}>
       <Image
         src="https://static1.lenskart.com/media/desktop/img/Apr22/Bannerforexport.jpg"
         alt="img"
@@ -215,6 +223,8 @@ const Home = () => {
       <HomeCard8 type={HomeDetails15} />
       <Footer />
     </Box>
+    </Box>
+    
   );
 };
 

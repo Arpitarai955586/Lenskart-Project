@@ -1,0 +1,33 @@
+.ClassicCard {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    gap: 30px;
+    margin-top:20px;
+    justify-content: center;
+    /* border: 1px solid red;  */
+    padding: 10px;
+  }
+  
+  .ClassicCard Link img {
+    width: 100px;
+    height:150px;
+    border:2px solid red;
+    border-radius: 10%;
+    object-fit: cover;
+   
+  }
+  
+  /* Responsive for mobile view */
+  @media (max-width: 600px) {
+    .ClassicCard {
+      justify-content: center; /* Center items if fewer per row */
+    }
+  
+    .ClassicCard img {
+      width: 100%; /* Take full width for better mobile fit */
+      max-width: 150px; /* Optional: limit how large it gets */
+    }
+  }
+
+  

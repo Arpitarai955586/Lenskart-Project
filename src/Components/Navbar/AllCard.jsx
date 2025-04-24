@@ -1,10 +1,49 @@
 import { border ,Box } from '@chakra-ui/react'
-import React, {useState} from 'react'
+import React, {useState,useRef} from 'react'
 import style from './All.module.css'
 import { IoSearch } from "react-icons/io5";
 import { Link } from "react-router-dom"
 import { Button, Drawer, Radio, Space } from 'antd';
 import { useNavigate } from "react-router-dom";
+import { Carousel } from 'antd';
+
+const contentStyle = {
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: '#364d79',
+};
+const images = [
+  {
+    label: 'Top 1',
+    img: 'https://static1.lenskart.com/media/desktop/img/30-jan-25/ple/Trending-Phonic-Thumbnail.png',
+  },
+  {
+    label: 'Top 2',
+    img: 'https://static1.lenskart.com/media/desktop/img/30-jan-25/ple/Trending-Phonic-Thumbnail.png',
+  },
+  {
+    label: 'Top 3',
+    img: 'https://static1.lenskart.com/media/desktop/img/30-jan-25/ple/Trending-Phonic-Thumbnail.png',
+  },
+  {
+    label: 'Top 4',
+    img: 'https://static1.lenskart.com/media/desktop/img/30-jan-25/ple/Trending-Phonic-Thumbnail.png',
+  },
+  {
+    label: 'Top 5',
+    img: 'https://static1.lenskart.com/media/desktop/img/30-jan-25/ple/Trending-Phonic-Thumbnail.png',
+  },
+  {
+    label: 'Top 6',
+    img: 'https://static1.lenskart.com/media/desktop/img/30-jan-25/ple/Trending-Phonic-Thumbnail.png',
+  },
+];
+
+
+
+
 const AllCard = () => {
    const [open, setOpen] = useState(false);
    const [placement, setPlacement] = useState('left');
@@ -55,7 +94,18 @@ const AllCard = () => {
     navigate("/hof-store");
   };
 
-
+  const [dotPosition, setDotPosition] = useState('top');
+  const handlePositionChange = ({ target: { value } }) => {
+    setDotPosition(value);
+  };
+  
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const carouselRef = useRef(null);
+  
+    const handleTabClick = (index) => {
+      setCurrentSlide(index);
+      carouselRef.current.goTo(index, true);
+    };
   return (
     <div>
          <Box style={{  display:"flex",justifyContent:"center" ,textAlign:"center", gap:"20px", marginTop:"10px"}} >
@@ -1390,27 +1440,765 @@ const AllCard = () => {
         />
       </div>
     </Box>
-    <div style={{width:"100%", height:"300px", backgroundColor:"skyblue" ,borderRadius:"10% 10%  10% 10%"  , marginTop:"10px"}}>
+    
+     <Box  style={{marginTop:"20px"}}>
+       <Carousel autoplay>
+       <div 
+        >
+        <img src="https://static5.lenskart.com/media/uploads/free-lens-home-16mar.png" alt="" />
+         </div>
+    <div>
+      <img src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/sun-square.jpg" alt="" />
+    </div>
+    
+    <div>
+    <img src="https://static5.lenskart.com/media/uploads/free-lens-home-16mar.png" alt="" />
+    </div>
+      </Carousel>
+     </Box>
+     <div style={{width:"100%", height:"350px", backgroundColor:"skyblue" ,borderRadius:"10% 10%  10% 10%"  , marginTop:"10px"}}>
     <Box>
   <p 
     style={{
       fontSize: "20px",
-      marginLeft: "20px",
+      marginLeft: "10px",
       color: "blue",
+      fontFamily: "Courser",
+      fontWeight: "bold",
+      // border:"1px solid black",
+      padding:"20px"
+    
+    }}
+  >style <span style={{backgroundColor:"blue" , color:"white"  ,borderRadius:"10%" ,padding:"10px"}}>button</span>
+<br/>
+  <span style={{color:"black"}}>the style discover by</span>
+  </p>
+  <Box style={{
+  overflowX: "auto",
+  display: "flex",
+  gap: "20px",
+  padding: "10px",
+  scrollBehavior: "smooth",
+  width: "100%",
+  // border: "1px solid black"
+}}>
+  <Link to="/toddlers" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "100px",
+      height: "100px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/juniors" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "80px",
+      height: "80px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/toddlers" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "80px",
+      height: "80px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/juniors" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "80px",
+      height: "80px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+</Box>
+<Box style={{
+  overflowX: "auto",
+  display: "flex",
+  gap: "20px",
+  padding: "10px",
+  scrollBehavior: "smooth",
+  width: "100%",
+  // border: "1px solid black"
+}}>
+  <Link to="/toddlers" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "100px",
+      height: "100px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/juniors" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "100px",
+      height: "100px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/toddlers" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "100px",
+      height: "100px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/juniors" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "100px",
+      height: "100px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+</Box>
+   </Box>  
+   </div>
+    <Box>
+    <card class={style.ClassicCard} >
+              <Link to="/1">
+              <img src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png" alt="" /></Link>
+              <Link to="/1">
+              <img src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png" alt="" /></Link>
+              <Link to="/1">
+              <img src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png" alt="" /></Link>
+              <Link to="/1">
+              <img src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png" alt="" /></Link>
+              <Link to="/1">
+              <img src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png" alt="" /></Link>
+              <Link to="/1">
+              <img src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png" alt="" /></Link>
+            </card>
+    </Box>
+    <Box>
+  <p 
+    style={{
+      fontSize: "15px",
+      marginLeft: "20px",
+      color: "black",
       marginTop: "20px",
       fontFamily: "sans-serif",
       fontWeight: "bold",
       // border:"1px solid black"
     }}
   >
-    Recommanded for you
-    <br />
-    <span style={{color:"black" ,fontSize:"15px"}}>the best Recommanded for you</span>
+    Get personalized services
   </p>
-   </Box>  
+</Box>
+<Box style={{
+  overflowX: "auto",
+  display: "flex",
+  gap: "20px",
+  padding: "10px",
+  scrollBehavior: "smooth",
+  width: "100%",
+  // border: "1px solid black"
+}}>
+  <Link to="/toddlers" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "140px",
+      height: "180px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
     </div>
+  </Link>
+
+  <Link to="/juniors" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "140px",
+      height: "180px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/toddlers" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "140px",
+      height: "180px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/juniors" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "140px",
+      height: "180px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+</Box>
+<Box>
+  <p 
+    style={{
+      fontSize: "15px",
+      marginLeft: "20px",
+      color: "black",
+      marginTop: "20px",
+      fontFamily: "sans-serif",
+      fontWeight: "bold",
+      // border:"1px solid black"
+    }}
+  >
+    Get personalized services
+  </p>
+</Box>
+<Box style={{
+  overflowX: "auto",
+  display: "flex",
+  gap: "20px",
+  padding: "10px",
+  scrollBehavior: "smooth",
+  width: "100%",
+  // border: "1px solid black"
+}}>
+  <Link to="/toddlers" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "140px",
+      height: "140px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/juniors" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "140px",
+      height: "140px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/toddlers" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "140px",
+      height: "140px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+
+  <Link to="/juniors" style={{ textDecoration: "none" }}>
+    <div style={{
+      width: "140px",
+      height: "140px",
+      flex: "0 0 auto",
+      cursor: "pointer"
+    }}>
+      <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt="" style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }} />
+    </div>
+  </Link>
+</Box>
+
+   <Box style={{backgroundColor:"skyblue ",weight:"100%",Height:"500px"}}>
+   <Box>
+  <p 
+    style={{
+      fontSize: "20px",
+      marginLeft: "20px",
+      color: "black",
+      marginTop: "20px",
+      fontFamily: "sans-serif",
+      fontWeight: "bold", 
+      padding:"20px"
+      // border:"1px solid black"
+    }}
+  >Get personalized services
+  </p>
+</Box>
+<div style={{ width: '100%' }}>
+      {/* Scrollable Buttons */}
+      <div
+        style={{
+          display: 'flex',
+          overflowX: 'auto',
+          padding: '10px',
+          gap: '10px',
+        }}
+      >
+        {images.map((item, index) => (
+          <button
+            key={index}
+            onClick={() => handleTabClick(index)}
+            style={{
+              padding: '8px 16px',
+              minWidth: 'max-content',
+              borderRadius: '20px',
+              border: '1px solid #ccc',
+              backgroundColor: currentSlide === index ? '#003366' : '#f0f0f0',
+              color: currentSlide === index ? '#fff' : '#333',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {item.label}
+          </button>
+        ))}
       </div>
+
+      {/* Carousel */}
+      <div style={{ marginTop: '20px' ,justifyContent:"center" }}>
+        <Carousel
+          ref={carouselRef}
+          afterChange={(current) => setCurrentSlide(current)}
+          autoplay
+        >
+          {images.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                textAlign: 'center',
+                padding: '20px',
+                marginLeft:"30px"
+              }}
+            >
+              <img
+                src={item.img}
+                alt={item.label}
+                
+              />
+            </div>
+          ))}
+        </Carousel>
+      </div>
+    </div>
+    
+  </Box>
+  <Box style={{backgroundColor:"skyblue ",weight:"100%",Height:"500px"}}>
+   
+  <div style={{ width: '100%' ,border:"1px solid black" ,marginTop:"20px"  }}>
+      {/* Scrollable Buttons */}
+      <div
+        style={{
+          display: 'flex',
+          overflowX: 'auto',
+          padding: '10px',
+          gap: '10px',
+        }}
+      >
+        {images.map((item, index) => (
+          <button
+            key={index}
+            onClick={() => handleTabClick(index)}
+            style={{
+              padding: '8px 16px',
+              minWidth: 'max-content',
+              borderRadius: '20px',
+              border: '1px solid #ccc',
+              backgroundColor: currentSlide === index ? '#003366' : '#f0f0f0',
+              color: currentSlide === index ? '#fff' : '#333',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Carousel */}
+      <div style={{ marginTop: '20px' ,justifyContent:"center" }}>
+        <Carousel
+          ref={carouselRef}
+          afterChange={(current) => setCurrentSlide(current)}
+          autoplay
+        >
+          {images.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                textAlign: 'center',
+                padding: '20px',
+                marginLeft:"30px"
+              }}
+            >
+              <img
+                src={item.img}
+                alt={item.label}
+                
+              />
+            </div>
+          ))}
+        </Carousel>
+      </div>
+    </div>
+    
+  </Box>
+  <Box style={{backgroundColor:"skyblue ",weight:"100%",Height:"500px"}}>
+   
+   <div style={{ width: '100%' ,border:"1px solid black" ,marginTop:"20px"  }}>
+       {/* Scrollable Buttons */}
+       <div
+         style={{
+           display: 'flex',
+           overflowX: 'auto',
+           padding: '10px',
+           gap: '10px',
+         }}
+       >
+         {images.map((item, index) => (
+           <button
+             key={index}
+             onClick={() => handleTabClick(index)}
+             style={{
+               padding: '8px 16px',
+               minWidth: 'max-content',
+               borderRadius: '20px',
+               border: '1px solid #ccc',
+               backgroundColor: currentSlide === index ? '#003366' : '#f0f0f0',
+               color: currentSlide === index ? '#fff' : '#333',
+               fontWeight: 'bold',
+               cursor: 'pointer',
+               whiteSpace: 'nowrap',
+             }}
+           >
+             {item.label}
+           </button>
+         ))}
+       </div>
+ 
+       {/* Carousel */}
+       <div style={{ marginTop: '20px' ,justifyContent:"center" }}>
+         <Carousel
+           ref={carouselRef}
+           afterChange={(current) => setCurrentSlide(current)}
+           autoplay
+         >
+           {images.map((item, index) => (
+             <div
+               key={index}
+               style={{
+                 textAlign: 'center',
+                 padding: '20px',
+                 marginLeft:"30px"
+               }}
+             >
+               <img
+                 src={item.img}
+                 alt={item.label}
+                 
+               />
+             </div>
+           ))}
+         </Carousel>
+       </div>
+     </div>
+     
+   </Box>
+   <Box style={{backgroundColor:"skyblue ",weight:"100%",Height:"500px"}}>
+   
+   <div style={{ width: '100%' ,border:"1px solid black" ,marginTop:"20px"  }}>
+       {/* Scrollable Buttons */}
+       <div
+         style={{
+           display: 'flex',
+           overflowX: 'auto',
+           padding: '10px',
+           gap: '10px',
+         }}
+       >
+         {images.map((item, index) => (
+           <button
+             key={index}
+             onClick={() => handleTabClick(index)}
+             style={{
+               padding: '8px 16px',
+               minWidth: 'max-content',
+               borderRadius: '20px',
+               border: '1px solid #ccc',
+               backgroundColor: currentSlide === index ? '#003366' : '#f0f0f0',
+               color: currentSlide === index ? '#fff' : '#333',
+               fontWeight: 'bold',
+               cursor: 'pointer',
+               whiteSpace: 'nowrap',
+             }}
+           >
+             {item.label}
+           </button>
+         ))}
+       </div>
+ 
+       {/* Carousel */}
+       <div style={{ marginTop: '20px' ,justifyContent:"center" }}>
+         <Carousel
+           ref={carouselRef}
+           afterChange={(current) => setCurrentSlide(current)}
+           autoplay
+         >
+           {images.map((item, index) => (
+             <div
+               key={index}
+               style={{
+                 textAlign: 'center',
+                 padding: '20px',
+                 marginLeft:"30px"
+               }}
+             >
+               <img
+                 src={item.img}
+                 alt={item.label}
+                 
+               />
+             </div>
+           ))}
+         </Carousel>
+       </div>
+     </div>
+     
+   </Box>
+   <Box style={{backgroundColor:"skyblue ",weight:"100%",Height:"500px"}}>
+   
+   <div style={{ width: '100%' ,border:"1px solid black" ,marginTop:"20px"  }}>
+       {/* Scrollable Buttons */}
+       <div
+         style={{
+           display: 'flex',
+           overflowX: 'auto',
+           padding: '10px',
+           gap: '10px',
+         }}
+       >
+         {images.map((item, index) => (
+           <button
+             key={index}
+             onClick={() => handleTabClick(index)}
+             style={{
+               padding: '8px 16px',
+               minWidth: 'max-content',
+               borderRadius: '20px',
+               border: '1px solid #ccc',
+               backgroundColor: currentSlide === index ? '#003366' : '#f0f0f0',
+               color: currentSlide === index ? '#fff' : '#333',
+               fontWeight: 'bold',
+               cursor: 'pointer',
+               whiteSpace: 'nowrap',
+             }}
+           >
+             {item.label}
+           </button>
+         ))}
+       </div>
+ 
+       {/* Carousel */}
+       <div style={{ marginTop: '20px' ,justifyContent:"center" }}>
+         <Carousel
+           ref={carouselRef}
+           afterChange={(current) => setCurrentSlide(current)}
+           autoplay
+         >
+           {images.map((item, index) => (
+             <div
+               key={index}
+               style={{
+                 textAlign: 'center',
+                 padding: '20px',
+                 marginLeft:"30px"
+               }}
+             >
+               <img
+                 src={item.img}
+                 alt={item.label}
+                 
+               />
+             </div>
+           ))}
+         </Carousel>
+       </div>
+     </div>
+     
+   </Box>
+   <Box style={{backgroundColor:"skyblue ",weight:"100%",Height:"500px"}}>
+   
+   <div style={{ width: '100%' ,border:"1px solid black" ,marginTop:"20px"  }}>
+       {/* Scrollable Buttons */}
+       <div
+         style={{
+           display: 'flex',
+           overflowX: 'auto',
+           padding: '10px',
+           gap: '10px',
+         }}
+       >
+         {images.map((item, index) => (
+           <button
+             key={index}
+             onClick={() => handleTabClick(index)}
+             style={{
+               padding: '8px 16px',
+               minWidth: 'max-content',
+               borderRadius: '20px',
+               border: '1px solid #ccc',
+               backgroundColor: currentSlide === index ? '#003366' : '#f0f0f0',
+               color: currentSlide === index ? '#fff' : '#333',
+               fontWeight: 'bold',
+               cursor: 'pointer',
+               whiteSpace: 'nowrap',
+             }}
+           >
+             {item.label}
+           </button>
+         ))}
+       </div>
+ 
+       {/* Carousel */}
+       <div style={{ marginTop: '20px' ,justifyContent:"center" }}>
+         <Carousel
+           ref={carouselRef}
+           afterChange={(current) => setCurrentSlide(current)}
+           autoplay
+         >
+           {images.map((item, index) => (
+             <div
+               key={index}
+               style={{
+                 textAlign: 'center',
+                 padding: '20px',
+                 marginLeft:"30px"
+               }}
+             >
+               <img
+                 src={item.img}
+                 alt={item.label}
+                 
+               />
+             </div>
+           ))}
+         </Carousel>
+       </div>
+     </div>
+     
+   </Box>
+   <Box >
+        <p 
+        style={{
+         fontSize: "20px",
+        marginLeft: "20px",
+        color: "blue",
+        marginTop: "5px",
+        fontFamily: "sans-serif",
+        fontWeight: "bold",
+        
+    }}
+  >
+    The Eyeglass Lens
+  </p>
+  <span>
+    <img src="https://static1.lenskart.com/media/desktop/img/11-jan-25/c-x.png" />
+  </span>
+</Box>
+</div>
   )
 }
+
 
 export default AllCard

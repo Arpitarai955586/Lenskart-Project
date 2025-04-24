@@ -69,7 +69,11 @@ const items = [
         All
       </span>
     ),
-    children:<AllCard/>
+    children:<div>
+      <AllCard/>,
+     <NavFooter/>
+  </div>,
+
   },
   {
     key: '2',
