@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import { Button, Drawer, Radio, Space } from 'antd';
 import { useNavigate } from "react-router-dom";
 import { Carousel } from 'antd';
+import StorePage from './ErrorPage';
 
 const contentStyle = {
   height: '160px',
@@ -91,7 +92,7 @@ const AllCard = () => {
     navigate("/Hof-store");
   };
   const HandleClick = () => {
-    navigate("/hof-store");
+    navigate("/Lens-store");
   };
 
   const [dotPosition, setDotPosition] = useState('top');
@@ -1215,12 +1216,21 @@ const AllCard = () => {
              flex: "0 0 auto"
             
           }}>
-             <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif "alt="" style={{
+             {/* <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif "alt="" style={{
+                 width: "100%",
+                 height: "100%",
+               objectFit: "cover",
+              
+            }} /> */}
+            <Link to="/storePage"
+            >
+            <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif "alt="" style={{
                  width: "100%",
                  height: "100%",
                objectFit: "cover",
               
             }} />
+            </Link>
           </li>
           <li style={{
             width: "250px",
@@ -1228,6 +1238,7 @@ const AllCard = () => {
             listStyleType: "none",
             flex: "0 0 auto"
           }}>
+            <Link to="/2">
             <img src="https://static5.lenskart.com/media/uploads/Juniors.gif" alt=""
              style={{
                 width: "100%",
@@ -1237,6 +1248,7 @@ const AllCard = () => {
               
             }} 
              />
+            </Link>
           </li>
           <li style={{
             width: "250px",

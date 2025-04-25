@@ -34,6 +34,7 @@ const Home = () => {
       <HomeCard1 type={HomeDetails1}  /> */}
       <Box display={{ base: "none", md: "block" }}>
        <HomeCard type={HomeDetails} />
+       
      </Box>
 
    <Box display={{ base: "none", md: "block" }}>
