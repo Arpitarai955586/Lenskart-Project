@@ -1217,7 +1217,7 @@ const AllCard = () => {
             
           }}>
              
-             
+
             <Link to="/storePage"
             >
             <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif "alt="" style={{
@@ -1832,6 +1832,7 @@ const AllCard = () => {
           gap: '10px',
         }}
       >
+        <Link to="./toddlers">
         {images.map((item, index) => (
           <button
             key={index}
@@ -1850,7 +1851,9 @@ const AllCard = () => {
           >
             {item.label}
           </button>
+          
         ))}
+        </Link>
       </div>
 
       {/* Carousel */}
@@ -1892,7 +1895,7 @@ const AllCard = () => {
           padding: '10px',
           gap: '10px',
         }}
-      >
+      ><Link to="./toddlers">
         {images.map((item, index) => (
           <button
             key={index}
@@ -1912,6 +1915,7 @@ const AllCard = () => {
             {item.label}
           </button>
         ))}
+        </Link>
       </div>
 
       {/* Carousel */}
@@ -2204,6 +2208,60 @@ const AllCard = () => {
     <img src="https://static1.lenskart.com/media/desktop/img/11-jan-25/c-x.png" />
   </span>
 </Box>
+   <Box>
+    <div style={{
+      display: "flex",
+      justifyContent: "space-around",
+      alignItems: "center",
+      backgroundColor: "#ffffff",
+      // border: "2px solid red",
+      padding: "10px 0",
+      position: "fixed",
+      bottom: "0",
+      width: "100%"
+    }}>
+      {/* Home */}
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", color: "#000066" }}>
+        <span style={{ fontSize: "24px" }}>🏠</span>
+        <span style={{ fontWeight: "bold", fontSize: "12px" }}>Home</span>
+      </div>
+
+      {/* Explore */}
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", color: "#cccccc" }}>
+        <span style={{ fontSize: "24px" }}>🔺</span>
+        <span style={{ fontSize: "12px" }}>Explore</span>
+      </div>
+
+      {/* AR Try on */}
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "#008060",
+        borderRadius: "50%",
+        width: "50px",
+        height: "50px",
+        justifyContent: "center",
+        color: "#ffffff"
+      }}>
+        <span style={{ fontSize: "24px" }}>👓</span>
+        <span style={{ fontSize: "8px", marginTop: "2px" }}>AR Try on</span>
+      </div>
+
+      {/* Eyecare */}
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", color: "#cccccc" }}>
+        <span style={{ fontSize: "24px" }}>🌿</span>
+        <span style={{ fontSize: "12px" }}>Eyecare</span>
+      </div>
+
+      {/* Orders */}
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", color: "#cccccc" }}>
+        <span style={{ fontSize: "24px" }}>📝</span>
+        <span style={{ fontSize: "12px" }}>Orders</span>
+      </div>
+    </div>
+  </Box>
+
 </div>
   )
 }
