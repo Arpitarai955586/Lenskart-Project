@@ -27,7 +27,7 @@ export default function EyeglassesPage() {
       objectFit: 'cover',
     },
     bannerText: {
-      position: 'absolute'
+      position: 'absolute',
       bottom: '16px',
       left: '16px',
       color: 'white',
