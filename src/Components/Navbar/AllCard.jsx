@@ -1216,12 +1216,8 @@ const AllCard = () => {
              flex: "0 0 auto"
             
           }}>
-             {/* <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif "alt="" style={{
-                 width: "100%",
-                 height: "100%",
-               objectFit: "cover",
-              
-            }} /> */}
+             
+             
             <Link to="/storePage"
             >
             <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif "alt="" style={{

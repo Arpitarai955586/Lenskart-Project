@@ -17,6 +17,7 @@ import EditProduct from "../Pages/Admin/EditProduct";
 import StorePage from "./Navbar/ErrorPage";
 import LensCard from  "./Navbar/LensCard";
 import LenskartHome from  "./Navbar/LenskartHome";
+import EyeglassesPage from "./Navbar/ToddlerCard";
 const AllRoutes = () => {
   const location = useLocation();
 
@@ -31,6 +32,7 @@ const AllRoutes = () => {
       <Route path="/storePage" element={<StorePage/>} />
       <Route path="/image-store" element={<LensCard/>} />
       <Route path="/Lens-store" element={<LenskartHome/>} />
+      <Route path="/toddlers" element={<EyeglassesPage/>} />
       <Route
         path="/cart"
         element={
