@@ -1832,7 +1832,7 @@ const AllCard = () => {
           gap: '10px',
         }}
       >
-        <Link to="./toddlers">
+        {/* <Link to="./toddlers"> */}
         {images.map((item, index) => (
           <button
             key={index}
@@ -1853,7 +1853,7 @@ const AllCard = () => {
           </button>
           
         ))}
-        </Link>
+        {/* </Link> */}
       </div>
 
       {/* Carousel */}
@@ -1872,11 +1872,13 @@ const AllCard = () => {
                 marginLeft:"30px"
               }}
             >
+              <Link to="./toddlers">
               <img
                 src={item.img}
                 alt={item.label}
                 
               />
+              </Link>
             </div>
           ))}
         </Carousel>
@@ -1895,7 +1897,8 @@ const AllCard = () => {
           padding: '10px',
           gap: '10px',
         }}
-      ><Link to="./toddlers">
+      >
+        {/* <Link to="./toddlers"> */}
         {images.map((item, index) => (
           <button
             key={index}
@@ -1915,7 +1918,7 @@ const AllCard = () => {
             {item.label}
           </button>
         ))}
-        </Link>
+        {/* </Link> */}
       </div>
 
       {/* Carousel */}
@@ -1934,11 +1937,13 @@ const AllCard = () => {
                 marginLeft:"30px"
               }}
             >
+              <Link to="./toddlers">
               <img
                 src={item.img}
                 alt={item.label}
                 
               />
+              </Link>
             </div>
           ))}
         </Carousel>
@@ -1995,11 +2000,76 @@ const AllCard = () => {
                  marginLeft:"30px"
                }}
              >
+               <Link to="./toddlers">
                <img
                  src={item.img}
                  alt={item.label}
                  
                />
+               </Link>
+             </div>
+           ))}
+         </Carousel>
+       </div>
+     </div>
+     
+   </Box>
+   <Box style={{backgroundColor:"skyblue ",weight:"100%",Height:"500px"}}>
+   
+   <div style={{ width: '100%' ,border:"1px solid black" ,marginTop:"20px"  }}>
+       {/* Scrollable Buttons */}
+       <div
+         style={{
+           display: 'flex',
+           overflowX: 'auto',
+           padding: '10px',
+           gap: '10px',
+         }}
+       >
+         {images.map((item, index) => (
+           <button
+             key={index}
+             onClick={() => handleTabClick(index)}
+             style={{
+               padding: '8px 16px',
+               minWidth: 'max-content',
+               borderRadius: '20px',
+               border: '1px solid #ccc',
+               backgroundColor: currentSlide === index ? '#003366' : '#f0f0f0',
+               color: currentSlide === index ? '#fff' : '#333',
+               fontWeight: 'bold',
+               cursor: 'pointer',
+               whiteSpace: 'nowrap',
+             }}
+           >
+             {item.label}
+           </button>
+         ))}
+       </div>
+ 
+       {/* Carousel */}
+       <div style={{ marginTop: '20px' ,justifyContent:"center" }}>
+         <Carousel
+           ref={carouselRef}
+           afterChange={(current) => setCurrentSlide(current)}
+           autoplay
+         >
+           {images.map((item, index) => (
+             <div
+               key={index}
+               style={{
+                 textAlign: 'center',
+                 padding: '20px',
+                 marginLeft:"30px"
+               }}
+             > 
+                <Link to="./toddlers">
+               <img
+                 src={item.img}
+                 alt={item.label}
+                 
+               />
+               </Link>
              </div>
            ))}
          </Carousel>
@@ -2056,11 +2126,13 @@ const AllCard = () => {
                  marginLeft:"30px"
                }}
              >
+              <Link to="./toddlers">
                <img
                  src={item.img}
                  alt={item.label}
                  
                />
+               </Link>
              </div>
            ))}
          </Carousel>
@@ -2117,72 +2189,13 @@ const AllCard = () => {
                  marginLeft:"30px"
                }}
              >
+              <Link to="./toddlers">
                <img
                  src={item.img}
                  alt={item.label}
                  
                />
-             </div>
-           ))}
-         </Carousel>
-       </div>
-     </div>
-     
-   </Box>
-   <Box style={{backgroundColor:"skyblue ",weight:"100%",Height:"500px"}}>
-   
-   <div style={{ width: '100%' ,border:"1px solid black" ,marginTop:"20px"  }}>
-       {/* Scrollable Buttons */}
-       <div
-         style={{
-           display: 'flex',
-           overflowX: 'auto',
-           padding: '10px',
-           gap: '10px',
-         }}
-       >
-         {images.map((item, index) => (
-           <button
-             key={index}
-             onClick={() => handleTabClick(index)}
-             style={{
-               padding: '8px 16px',
-               minWidth: 'max-content',
-               borderRadius: '20px',
-               border: '1px solid #ccc',
-               backgroundColor: currentSlide === index ? '#003366' : '#f0f0f0',
-               color: currentSlide === index ? '#fff' : '#333',
-               fontWeight: 'bold',
-               cursor: 'pointer',
-               whiteSpace: 'nowrap',
-             }}
-           >
-             {item.label}
-           </button>
-         ))}
-       </div>
- 
-       {/* Carousel */}
-       <div style={{ marginTop: '20px' ,justifyContent:"center" }}>
-         <Carousel
-           ref={carouselRef}
-           afterChange={(current) => setCurrentSlide(current)}
-           autoplay
-         >
-           {images.map((item, index) => (
-             <div
-               key={index}
-               style={{
-                 textAlign: 'center',
-                 padding: '20px',
-                 marginLeft:"30px"
-               }}
-             >
-               <img
-                 src={item.img}
-                 alt={item.label}
-                 
-               />
+               </Link>
              </div>
            ))}
          </Carousel>
