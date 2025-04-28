@@ -2257,10 +2257,12 @@ const AllCard = () => {
         width: "50px",
         height: "50px",
         justifyContent: "center",
-        color: "#ffffff"
+        color: "#cccccc",
+        marginTop:"-10px",
+        gap:"2px"
       }}>
-        <span style={{ fontSize: "24px" }}>👓</span>
-        <span style={{ fontSize: "8px", marginTop: "2px" }}>AR Try on</span>
+        <p style={{ fontSize: "20px"  , marginTop:"20px"  }}>👓</p>
+        <p style={{ fontSize: "10px", marginTop:"10px" }}>AR Try on</p>
       </div>
 
       {/* Eyecare */}
