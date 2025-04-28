@@ -59,7 +59,7 @@ export default function CardStore() {
           <FaBars size={20} />
         </div>
       </div>
-      <span>
+      <span style={{width:"100%"}}>
       <img src="https://static5.lenskart.com/media/uploads/Lens-replacement-LP-new-topbanner_2-SG-040425.png" alt="" />
       </span>
       <button
