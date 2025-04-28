@@ -18,6 +18,10 @@ import StorePage from "./Navbar/ErrorPage";
 import LensCard from  "./Navbar/LensCard";
 import LenskartHome from  "./Navbar/LenskartHome";
 import EyeglassesPage from "./Navbar/ToddlerCard";
+import HarryPotter from "./Navbar/HarryPotter";
+import SwapsAdultPage from "./Navbar/SwapAault";
+import CreaterCard from "./Navbar/CreaterCard";
+import CardStore from "./Navbar/CardStore";
 const AllRoutes = () => {
   const location = useLocation();
 
@@ -33,6 +37,10 @@ const AllRoutes = () => {
       <Route path="/image-store" element={<LensCard/>} />
       <Route path="/Lens-store" element={<LenskartHome/>} />
       <Route path="/toddlers" element={<EyeglassesPage/>} />
+      <Route path="/HarryPotter" element={<HarryPotter/>} />
+      <Route path="/SwapAault" element={<SwapsAdultPage/>} />
+      <Route path="/Creater" element={<CreaterCard/>} />
+      <Route path="/Card" element={<CardStore/>} />
       <Route
         path="/cart"
         element={

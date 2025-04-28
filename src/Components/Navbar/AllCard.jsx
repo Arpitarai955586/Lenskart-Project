@@ -144,12 +144,14 @@ const AllCard = () => {
              flex: "0 0 auto"
             
           }}>
+            <Link to="/card">
              <img src="https://static5.lenskart.com/media/uploads/Toddlers.gif "alt="" style={{
                  width: "100%",
                  height: "100%",
                objectFit: "cover",
               
             }} />
+             </Link>
           </li>
           <li style={{
             width: "250px",
@@ -1937,7 +1939,7 @@ const AllCard = () => {
                 marginLeft:"30px"
               }}
             >
-              <Link to="./toddlers">
+              <Link to="./SwapAault">
               <img
                 src={item.img}
                 alt={item.label}
@@ -2000,7 +2002,7 @@ const AllCard = () => {
                  marginLeft:"30px"
                }}
              >
-               <Link to="./toddlers">
+               <Link to="./Creater">
                <img
                  src={item.img}
                  alt={item.label}

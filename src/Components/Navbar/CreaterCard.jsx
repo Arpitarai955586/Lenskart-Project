@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaSearch, FaHeart, FaShoppingCart, FaBars } from "react-icons/fa";
 
-export default function EyeglassesPage() {
+export default function CreaterCard() {
     const navigate = useNavigate();
   const [tab, setTab] = useState('eyeglasses');
 
@@ -82,7 +82,7 @@ export default function EyeglassesPage() {
       {/* Header */}
       <div style={styles.header}>
        
-          <button onClick={() => navigate('/', { replace: true })}>
+          <button onClick={() => navigate("/")}>
            <FaArrowLeft size={20} />
         </button>
 
@@ -98,7 +98,7 @@ export default function EyeglassesPage() {
       {/* Banner */}
       <div style={styles.banner}>
         <img
-          src="https://i.imgur.com/KDIDiSE.png" 
+          src="https://static1.lenskart.com/media/desktop/img/7-feb-25/Sunglasses-Home-Main-v3.png" 
           alt="Harry Potter Styles"
           style={styles.bannerImage}
         />
@@ -139,42 +139,60 @@ export default function EyeglassesPage() {
           </button>
         </div>
       </div>
-      <div style={{ border: "2px solid red", padding: "10px", maxWidth: "400px", margin: "20px auto", borderRadius: "10px" }}>
-     <div style={{ textAlign: "center" }}>
-      <Link to="/HarryPotter">
-       <img
-         src="https://static1.lenskart.com/media/desktop/img/7-feb-25/Sunglasses-Home-Main-v3.png" 
-         alt="Lenskart X Harry Potter"
-         style={{ width: "100%", borderRadius: "10px" }}
-       />
-       </Link>
-     </div>
-
-     <div style={{ marginTop: "10px" }}>
-       <div style={{ backgroundColor: "orange", color: "white", display: "inline-block", padding: "2px 8px", borderRadius: "5px", fontSize: "12px" }}>
-         New Launch
-
-       </div>
-       <h3 style={{ margin: "10px 0 5px", fontSize: "18px" }}>Lenskart X Harry Potter</h3>
-       <p style={{ margin: "5px 0", fontSize: "14px" }}>
-         <span style={{ border: "1px solid grey", padding: "2px 8px", borderRadius: "5px" }}>M</span> Size
-       </p>
-       <p style={{ fontWeight: "bold", margin: "10px 0" }}>₹4000</p>
-       <button style={{
-         width: "100%",
-         padding: "10px",
-         backgroundColor: "white",
-         border: "2px solid blue",
-         color: "blue",
-         borderRadius: "8px",
-         cursor: "pointer",
-         fontWeight: "bold"
-       }}>
-         View Details
-       </button>
-     </div>
-   </div>
-
+      <div style={{
+      border: '2px solid black',
+      width: '350px',
+      padding: '16px',
+      borderRadius: '8px',
+      fontFamily: 'Arial, sans-serif',
+      position: 'relative',
+      marginLeft:"17px",
+      marginTop:"10px"
+    }}>
+      <div style={{ textAlign: 'right' }}>
+        <span style={{ fontSize: '24px', color: '#999' }}>♡</span>
+      </div>
+      <img 
+        src="https://static1.lenskart.com/media/desktop/img/7-feb-25/Sunglasses-Home-Main-v3.png" 
+        alt="Glasses" 
+        style={{ width: '100%', height: 'auto', marginBottom: '10px' }} 
+      />
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+        <span style={{ fontSize: '14px', color: '#555' }}>View Similar</span>
+        <span style={{ fontSize: '14px', fontWeight: 'bold', color: '#333' }}>4.7 ★</span>
+      </div>
+      <div style={{ marginBottom: '8px' }}>
+        <button style={{
+          fontSize: '12px',
+          padding: '4px 8px',
+          borderRadius: '4px',
+          backgroundColor: '#eee',
+          border: 'none',
+          cursor: 'pointer'
+        }}>M Size</button>
+      </div>
+      <div style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '4px' }}>
+        Lenskart Swaps
+      </div>
+      <div style={{ fontSize: '14px', color: '#888', marginBottom: '4px' }}>
+        <del>₹3000</del> <span style={{ color: 'green' }}>(17% OFF)</span>
+      </div>
+      <div style={{ fontSize: '18px', color: '#000', marginBottom: '12px' }}>
+        ₹2500 <span style={{ fontSize: '14px', color: '#666' }}>with lenses</span>
+      </div>
+      <button style={{
+        width: '100%',
+        padding: '10px',
+        fontSize: '16px',
+        backgroundColor: '#fff',
+        color: '#000',
+        border: '1px solid #000',
+        borderRadius: '8px',
+        cursor: 'pointer'
+      }}>
+        View Details
+      </button>
+    </div>
     </div>
     
   );

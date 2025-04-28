@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaSearch, FaHeart, FaShoppingCart, FaBars } from "react-icons/fa";
 
-export default function EyeglassesPage() {
+export default function HarryPotter() {
     const navigate = useNavigate();
   const [tab, setTab] = useState('eyeglasses');
 
@@ -82,7 +82,7 @@ export default function EyeglassesPage() {
       {/* Header */}
       <div style={styles.header}>
        
-          <button onClick={() => navigate('/', { replace: true })}>
+          <button onClick={() => navigate(-1)}>
            <FaArrowLeft size={20} />
         </button>
 
@@ -139,41 +139,7 @@ export default function EyeglassesPage() {
           </button>
         </div>
       </div>
-      <div style={{ border: "2px solid red", padding: "10px", maxWidth: "400px", margin: "20px auto", borderRadius: "10px" }}>
-     <div style={{ textAlign: "center" }}>
-      <Link to="/HarryPotter">
-       <img
-         src="https://static1.lenskart.com/media/desktop/img/7-feb-25/Sunglasses-Home-Main-v3.png" 
-         alt="Lenskart X Harry Potter"
-         style={{ width: "100%", borderRadius: "10px" }}
-       />
-       </Link>
-     </div>
-
-     <div style={{ marginTop: "10px" }}>
-       <div style={{ backgroundColor: "orange", color: "white", display: "inline-block", padding: "2px 8px", borderRadius: "5px", fontSize: "12px" }}>
-         New Launch
-
-       </div>
-       <h3 style={{ margin: "10px 0 5px", fontSize: "18px" }}>Lenskart X Harry Potter</h3>
-       <p style={{ margin: "5px 0", fontSize: "14px" }}>
-         <span style={{ border: "1px solid grey", padding: "2px 8px", borderRadius: "5px" }}>M</span> Size
-       </p>
-       <p style={{ fontWeight: "bold", margin: "10px 0" }}>₹4000</p>
-       <button style={{
-         width: "100%",
-         padding: "10px",
-         backgroundColor: "white",
-         border: "2px solid blue",
-         color: "blue",
-         borderRadius: "8px",
-         cursor: "pointer",
-         fontWeight: "bold"
-       }}>
-         View Details
-       </button>
-     </div>
-   </div>
+      
 
     </div>
     
