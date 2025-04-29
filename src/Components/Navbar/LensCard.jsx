@@ -1,8 +1,38 @@
 import React from 'react';
-
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaArrowLeft, FaSearch, FaHeart, FaShoppingCart, FaBars } from "react-icons/fa";
 const LensCard = () => {
+   const navigate = useNavigate();
+    const styles = {
+      header: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '10px 16px',
+        
+        backgroundColor: 'white',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+      },
+    }
   return (
     <div style={{ fontFamily: 'sans-serif', backgroundColor: '#e6f0ff' }}>
+      {/* Navbar */}
+            <div style={styles.header}>
+                  
+                     <button onClick={() => navigate('/', { replace: true })}>
+                      <FaArrowLeft size={20} />
+                   </button>
+           
+                   <h1 style={{ fontSize: '18px', fontWeight: '600', color: '#1E3A8A' }}>Harry Potter</h1>
+                   <div style={{ display: 'flex', gap: '12px' }}>
+                     <FaSearch size={20} />
+                     <FaHeart size={20} />
+                     <FaShoppingCart size={20} />
+                     <FaBars size={20} />
+                   </div>
+                 </div>
+
       {/* Top Section */}
       <div style={{ background: 'linear-gradient(to right, #001f3f, #0074D9)', color: '#fff', padding: '20px' }}>
         <h2 style={{ marginBottom: '5px' }}>TRY IT<br /><span style={{ fontWeight: 'bold' }}>TO BELIEVE IT!</span></h2>

@@ -7,7 +7,7 @@ import { Button, Drawer, Radio, Space } from 'antd';
 import { useNavigate } from "react-router-dom";
 import { Carousel } from 'antd';
 import StorePage from './ErrorPage';
-
+import { FaChevronRight } from 'react-icons/fa';
 const contentStyle = {
   height: '160px',
   color: '#fff',
@@ -65,6 +65,7 @@ const AllCard = () => {
     {
       src: 'https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png',
       title: 'Classic Eyeglasses',
+      name: "Vincent Chase | Lenskart Air",
       price: '₹999',
     },
     {
@@ -75,6 +76,7 @@ const AllCard = () => {
     {
       
           src:"https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png",
+          name: "Vincent Chase | Lenskart Air",
           
           title: 'Power Sunglasses',
           price: '₹1,799',
@@ -214,7 +216,7 @@ const AllCard = () => {
     justifyContent:"center",
     alignItem:"center",
     // marginTop:"20px"
-
+    
   }}
 >
    
@@ -237,6 +239,7 @@ const AllCard = () => {
         display: "block"
       }}
     />
+    
   </Button>
 
       <Drawer
@@ -252,25 +255,32 @@ const AllCard = () => {
     key={index}
     style={{
       marginBottom: '20px',
-      border: '1px solid red',
+      border: '2px solid black',
       width: '100%',
       display: 'flex',
       alignItems: 'center',
       gap: '10px',
-      padding: '10px'
-    }}
+      padding: '10px',
+      boxShadow:"inset 0 0 15px rgba(0, 0, 0, 0.3);"
+     }}
   >
     <img
       src={item.src}
       alt={item.title}
+
       style={{ width: '100px', height: 'auto' }}
     />
-    <div style={{marginLeft:"30px"}}>
-      <strong>{item.title}</strong>
+    
+    <div style={{marginLeft:"30px",marginBottom:"30px"}}>
+      <div style={{ fontWeight: 'bold',fontSize:"20px" }}>{item.title} </div>
       <div>{item.price}</div>
+      
     </div>
-     </div>
-))}
+    <div style={{border:"1px solid black"}} >
+      <FaChevronRight size={30} />
+       </div> 
+     </div>  
+))} 
 
        </Drawer>
        <Button 

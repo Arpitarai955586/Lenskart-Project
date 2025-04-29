@@ -1,8 +1,24 @@
 import React from "react";
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaArrowLeft, FaSearch, FaHeart, FaShoppingCart, FaBars } from "react-icons/fa";
 const LenskartHome=()=> {
     const [openIndex, setOpenIndex] = useState(null);
-
+    const navigate = useNavigate();
+        const styles = {
+          header: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '10px 16px',
+            postion:"fixed",
+            top:"0",
+            backgroundColor: 'white',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+          },
+        
+        }
   const faqs = [
     "What is Lenskart Home Eye Test?",
     "Why Should I Opt for the Lenskart Home Eye Test?",
@@ -21,9 +37,26 @@ const LenskartHome=()=> {
       setOpenIndex(index);
     }
   };
+
   return (
     <div style={{ fontFamily: "Arial, sans-serif", maxWidth: "400px", margin: "20px auto", border: "1px solid #ddd", borderRadius: "8px", overflow: "hidden", boxShadow: "0px 2px 8px rgba(0,0,0,0.1)" }}>
-      
+         {/* Navbar */}
+                     <div style={styles.header}>
+                           
+                              <button onClick={() => navigate('/', { replace: true })}>
+                               <FaArrowLeft size={20} />
+                            </button>
+                    
+                            <h1 style={{ fontSize: '18px', fontWeight: '600', color: '#1E3A8A' }}>Harry Potter</h1>
+                            <div style={{ display: 'flex', gap: '12px' }}>
+                              <FaSearch size={20} />
+                              <FaHeart size={20} />
+                              <FaShoppingCart size={20} />
+                              <FaBars size={20} />
+                            </div>
+                          </div>
+         
+
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 15px", borderBottom: "1px solid #eee" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>

@@ -1,22 +1,38 @@
 import React from 'react';
-
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaArrowLeft, FaSearch, FaHeart, FaShoppingCart, FaBars } from "react-icons/fa";
 const StorePage = () => {
+  const navigate = useNavigate();
+  const styles = {
+    header: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: '10px 16px',
+      
+      backgroundColor: 'white',
+      boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+    },
+  }
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: '#ffffff', textAlign: 'center', color: '#333' }}>
       
       {/* Navbar */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-        <img 
-          src="https://static.lenskart.com/media/desktop/img/site-images/main_logo.svg" 
-          alt="Lenskart Logo" 
-          style={{ height: '30px' }}
-        />
-        <div style={{ display: 'flex', gap: '10px', fontSize: '20px' }}>
-          <span>❤️</span>
-          <span>🔍</span>
-          <span>🛒</span>
-        </div>
-      </header>
+       <div style={styles.header}>
+             
+                <button onClick={() => navigate('/', { replace: true })}>
+                 <FaArrowLeft size={20} />
+              </button>
+      
+              <h1 style={{ fontSize: '18px', fontWeight: '600', color: '#1E3A8A' }}>Harry Potter</h1>
+              <div style={{ display: 'flex', gap: '12px' }}>
+                <FaSearch size={20} />
+                <FaHeart size={20} />
+                <FaShoppingCart size={20} />
+                <FaBars size={20} />
+              </div>
+            </div>
 
       {/* Main Content */}
       <main style={{ flexGrow: 1, padding: '40px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
