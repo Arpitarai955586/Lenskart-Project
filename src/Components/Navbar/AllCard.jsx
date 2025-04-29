@@ -317,7 +317,7 @@ const AllCard = () => {
     key={index}
     style={{
       marginBottom: '20px',
-      border: '1px solid red',
+      // border: '1px solid red',
       width: '100%',
       display: 'flex',
       alignItems: 'center',
@@ -510,62 +510,7 @@ const AllCard = () => {
     key={index}
     style={{
       marginBottom: '20px',
-      border: '1px solid red',
-      width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      gap: '10px',
-      padding: '10px'
-    }}
-  >
-    <img
-      src={item.src}
-      alt={item.title}
-      style={{ width: '100px', height: 'auto' }}
-    />
-    <div style={{marginLeft:"30px"}}>
-      <strong>{item.title}</strong>
-      <div>{item.price}</div>
-    </div>
-     </div>
-))}
-
-       </Drawer>
-       <Button 
-    type="text" 
-    onClick={showDrawer} 
-    style={{ 
-      height: "100%", 
-      padding: 0, // Remove default padding
-      minWidth: 0 // Prevent extra width from Button component
-    }}
-  >
-    <img
-      src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png"
-      alt="Eyeglasses"
-      style={{ 
-        height: "100%", 
-        width: "auto", 
-        objectFit: "cover",
-        display: "block"
-      }}
-    />
-  </Button>
-
-      <Drawer
-        title="Eyewear Collection"
-         placement="bottom"
-         closable={true}
-          onClose={onClose}
-         open={open}
-         height={300}
-      >
-     {imageData.map((item, index) => (
-  <div
-    key={index}
-    style={{
-      marginBottom: '20px',
-      border: '1px solid red',
+      // border: '1px solid red',
       width: '100%',
       display: 'flex',
       alignItems: 'center',
@@ -675,7 +620,62 @@ const AllCard = () => {
     key={index}
     style={{
       marginBottom: '20px',
-      border: '1px solid red',
+      // border: '1px solid red',
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      padding: '10px'
+    }}
+  >
+    <img
+      src={item.src}
+      alt={item.title}
+      style={{ width: '100px', height: 'auto' }}
+    />
+    <div style={{marginLeft:"30px"}}>
+      <strong>{item.title}</strong>
+      <div>{item.price}</div>
+    </div>
+     </div>
+))}
+
+       </Drawer>
+       <Button 
+    type="text" 
+    onClick={showDrawer} 
+    style={{ 
+      height: "100%", 
+      padding: 0, // Remove default padding
+      minWidth: 0 // Prevent extra width from Button component
+    }}
+  >
+    <img
+      src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png"
+      alt="Eyeglasses"
+      style={{ 
+        height: "100%", 
+        width: "auto", 
+        objectFit: "cover",
+        display: "block"
+      }}
+    />
+  </Button>
+
+      <Drawer
+        title="Eyewear Collection"
+         placement="bottom"
+         closable={true}
+          onClose={onClose}
+         open={open}
+         height={300}
+      >
+     {imageData.map((item, index) => (
+  <div
+    key={index}
+    style={{
+      marginBottom: '20px',
+      // border: '1px solid red',
       width: '100%',
       display: 'flex',
       alignItems: 'center',
@@ -759,62 +759,7 @@ const AllCard = () => {
     key={index}
     style={{
       marginBottom: '20px',
-      border: '1px solid red',
-      width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      gap: '10px',
-      padding: '10px'
-    }}
-  >
-    <img
-      src={item.src}
-      alt={item.title}
-      style={{ width: '100px', height: 'auto' }}
-    />
-    <div style={{marginLeft:"30px"}}>
-      <strong>{item.title}</strong>
-      <div>{item.price}</div>
-    </div>
-     </div>
-))}
-
-       </Drawer>
-       <Button 
-    type="text" 
-    onClick={showDrawer} 
-    style={{ 
-      height: "100%", 
-      padding: 0, // Remove default padding
-      minWidth: 0 // Prevent extra width from Button component
-    }}
-  >
-    <img
-      src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png"
-      alt="Eyeglasses"
-      style={{ 
-        height: "100%", 
-        width: "auto", 
-        objectFit: "cover",
-        display: "block"
-      }}
-    />
-  </Button>
-
-      <Drawer
-        title="Eyewear Collection"
-         placement="bottom"
-         closable={true}
-          onClose={onClose}
-         open={open}
-         height={300}
-      >
-     {imageData.map((item, index) => (
-  <div
-    key={index}
-    style={{
-      marginBottom: '20px',
-      border: '1px solid red',
+      // border: '1px solid red',
       width: '100%',
       display: 'flex',
       alignItems: 'center',
@@ -924,7 +869,62 @@ const AllCard = () => {
     key={index}
     style={{
       marginBottom: '20px',
-      border: '1px solid red',
+      // border: '1px solid red',
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      padding: '10px'
+    }}
+  >
+    <img
+      src={item.src}
+      alt={item.title}
+      style={{ width: '100px', height: 'auto' }}
+    />
+    <div style={{marginLeft:"30px"}}>
+      <strong>{item.title}</strong>
+      <div>{item.price}</div>
+    </div>
+     </div>
+))}
+
+       </Drawer>
+       <Button 
+    type="text" 
+    onClick={showDrawer} 
+    style={{ 
+      height: "100%", 
+      padding: 0, // Remove default padding
+      minWidth: 0 // Prevent extra width from Button component
+    }}
+  >
+    <img
+      src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png"
+      alt="Eyeglasses"
+      style={{ 
+        height: "100%", 
+        width: "auto", 
+        objectFit: "cover",
+        display: "block"
+      }}
+    />
+  </Button>
+
+      <Drawer
+        title="Eyewear Collection"
+         placement="bottom"
+         closable={true}
+          onClose={onClose}
+         open={open}
+         height={300}
+      >
+     {imageData.map((item, index) => (
+  <div
+    key={index}
+    style={{
+      marginBottom: '20px',
+      // border: '1px solid red',
       width: '100%',
       display: 'flex',
       alignItems: 'center',
@@ -1008,62 +1008,7 @@ const AllCard = () => {
     key={index}
     style={{
       marginBottom: '20px',
-      border: '1px solid red',
-      width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      gap: '10px',
-      padding: '10px'
-    }}
-  >
-    <img
-      src={item.src}
-      alt={item.title}
-      style={{ width: '100px', height: 'auto' }}
-    />
-    <div style={{marginLeft:"30px"}}>
-      <strong>{item.title}</strong>
-      <div>{item.price}</div>
-    </div>
-     </div>
-))}
-
-       </Drawer>
-       <Button 
-    type="text" 
-    onClick={showDrawer} 
-    style={{ 
-      height: "100%", 
-      padding: 0, // Remove default padding
-      minWidth: 0 // Prevent extra width from Button component
-    }}
-  >
-    <img
-      src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png"
-      alt="Eyeglasses"
-      style={{ 
-        height: "100%", 
-        width: "auto", 
-        objectFit: "cover",
-        display: "block"
-      }}
-    />
-  </Button>
-
-      <Drawer
-        title="Eyewear Collection"
-         placement="bottom"
-         closable={true}
-          onClose={onClose}
-         open={open}
-         height={300}
-      >
-     {imageData.map((item, index) => (
-  <div
-    key={index}
-    style={{
-      marginBottom: '20px',
-      border: '1px solid red',
+      // border: '1px solid red',
       width: '100%',
       display: 'flex',
       alignItems: 'center',
@@ -1173,7 +1118,62 @@ const AllCard = () => {
     key={index}
     style={{
       marginBottom: '20px',
-      border: '1px solid red',
+      // border: '1px solid red',
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      padding: '10px'
+    }}
+  >
+    <img
+      src={item.src}
+      alt={item.title}
+      style={{ width: '100px', height: 'auto' }}
+    />
+    <div style={{marginLeft:"30px"}}>
+      <strong>{item.title}</strong>
+      <div>{item.price}</div>
+    </div>
+     </div>
+))}
+
+       </Drawer>
+       <Button 
+    type="text" 
+    onClick={showDrawer} 
+    style={{ 
+      height: "100%", 
+      padding: 0, // Remove default padding
+      minWidth: 0 // Prevent extra width from Button component
+    }}
+  >
+    <img
+      src="https://static1.lenskart.com/media/desktop/img/31-jan-25/Classic/Shop%20by%20category/Classic-Eyeglasses.png"
+      alt="Eyeglasses"
+      style={{ 
+        height: "100%", 
+        width: "auto", 
+        objectFit: "cover",
+        display: "block"
+      }}
+    />
+  </Button>
+
+      <Drawer
+        title="Eyewear Collection"
+         placement="bottom"
+         closable={true}
+          onClose={onClose}
+         open={open}
+         height={300}
+      >
+     {imageData.map((item, index) => (
+  <div
+    key={index}
+    style={{
+      marginBottom: '20px',
+      // border: '1px solid red',
       width: '100%',
       display: 'flex',
       alignItems: 'center',
