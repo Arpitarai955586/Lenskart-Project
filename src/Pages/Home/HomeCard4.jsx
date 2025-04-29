@@ -4,10 +4,10 @@ import { Box, Text, Image } from "@chakra-ui/react";
 export const HomeCard4 = ({ text, src }) => {
   return (
     <Box mt="-20">
-      <Text fontSize="30px" pb="7" fontWeight="500" textAlign="center">
+      <Text fontSize="30px" pb="7" fontWeight="500" textAlign="center" >
         {text}
       </Text>
-      <Image src={src} alt="img" />
+      <Image src={src} alt="img"  />
     </Box>
   );
 };

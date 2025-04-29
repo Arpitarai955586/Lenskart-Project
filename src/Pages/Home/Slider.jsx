@@ -52,7 +52,7 @@ const Slider = ({ type }) => {
         <Box key={i}>
           <SwiperSlide>
             <Link to={i.linked}>
-              <Square m="auto">
+              <Square m="auto" >
                 <Image
                   src={`${i.img}`}
                   alt={i.name}

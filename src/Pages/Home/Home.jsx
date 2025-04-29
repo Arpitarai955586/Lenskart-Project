@@ -45,6 +45,7 @@ const Home = () => {
         src="https://static1.lenskart.com/media/desktop/img/Apr22/Bannerforexport.jpg"
         alt="img"
         mt="10"
+        
       />
       <HomeCard2 type={HomeDetails2} src="https://i.imgur.com/Gry0Q5D.png" />
       <br />
@@ -54,6 +55,7 @@ const Home = () => {
       <HomeCard4
         text="As Seen on Shark Tank"
         src="https://static1.lenskart.com/media/desktop/img/Dec22/1-Dec/Homepage-Banner-web.gif"
+        
       />
       <br />
       <br />
@@ -62,6 +64,7 @@ const Home = () => {
       <HomeCard4
         text="Trending Sunglasses"
         src="https://static1.lenskart.com/media/desktop/img/Jan23/sunglasses/Sun-Banner-web.gif"
+        
       />
       <br />
       <br />
