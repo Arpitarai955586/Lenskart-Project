@@ -248,6 +248,7 @@ const items = [
                         <Text mt="10px" fontSize="20px" color="blackAlpha.900">
                           {Authdata[0].first_name}
                         </Text>
+                        
                         <Text color="gray.500" mt="5%" fontSize="sm">
                           Enjoy Buy 1 Get 1 offer for 365 days
                         </Text>

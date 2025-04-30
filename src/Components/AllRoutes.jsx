@@ -22,6 +22,9 @@ import HarryPotter from "./Navbar/HarryPotter";
 import SwapsAdultPage from "./Navbar/SwapAault";
 import CreaterCard from "./Navbar/CreaterCard";
 import CardStore from "./Navbar/CardStore";
+import PurposeSection from "./Navbar/navbarDetail/NavbarDetail1";
+import Nav from "./Navbar/Nav"
+import StoreLocation from "./Navbar/navbarDetail/StoreLocation";
 const AllRoutes = () => {
   const location = useLocation();
 
@@ -41,8 +44,18 @@ const AllRoutes = () => {
       <Route path="/SwapAault" element={<SwapsAdultPage/>} />
       <Route path="/Creater" element={<CreaterCard/>} />
       <Route path="/Card" element={<CardStore/>} />
+    <Route path="/store-locator" element={<StoreLocation/>}/>
+      <Route path="/do-more" element={
+        <privateroutes>
+          <Nav/>
+          <PurposeSection/>
+        </privateroutes>
+      }
+         />
+        
       <Route
         path="/cart"
+        
         element={
           <Privateroutes>
             <Cart />

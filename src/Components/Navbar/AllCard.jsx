@@ -1174,6 +1174,7 @@ const AllCard = () => {
     style={{
       marginBottom: '20px',
       // border: '1px solid red',
+      
       width: '100%',
       display: 'flex',
       alignItems: 'center',

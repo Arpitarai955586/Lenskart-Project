@@ -30,6 +30,7 @@ function Menus() {
       cursor="pointer"
       bg="#fbf9f7"
       p={2.5}
+     
     >
       <HStack m="auto">
         <Box w="20%">

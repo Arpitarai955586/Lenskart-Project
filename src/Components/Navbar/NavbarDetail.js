@@ -1,41 +1,99 @@
+// export const NavbarDetail1 = [
+//   {
+//     labels: "Do more, Be More  | ",
+    
+//   },
+//   {
+//     labels: "Try in 3D  | ",
+    
+//   },
+//   {
+//     labels: "Store Locator  | ",
+   
+//   },
+//   {
+//     labels: "Quality  | "
+//   },
+//   {
+//     labels: "USA  | "
+//   },
+//   {
+//     labels: "Singapore  | "
+//   },
+//   {
+//     labels: "UAE  | "
+//   },
+//   {
+//     labels: "John Jacobs  | "
+//   },
+//   {
+//     labels: "Aqualens  | "
+//   },
+//   {
+//     labels: "Cobrowsing  | "
+//   },
+//   {
+//     labels: "Engineering Blog  | "
+//   },
+//   {
+//     labels: "SPX Franchise  | "
+//   },
+//   {
+//     labels: "Contact us"
+//   }
+// ];
 export const NavbarDetail1 = [
   {
-    labels: "Do more, Be More  | "
+    label: "Do more, Be More |",
+    link: "/do-more"
+  },
+  
+  {
+    label: "Store Locator |",
+    link: "/store-locator"
   },
   {
-    labels: "Try in 3D  | "
+    label: "Try in 3D |",
+    link: "/try-3d"
   },
   {
-    labels: "Store Locator  | "
+    label: "Quality |",
+    link: "/quality"
   },
   {
-    labels: "Quality  | "
+    label: "USA |",
+    link: "/usa"
   },
   {
-    labels: "USA  | "
+    label: "Singapore |",
+    link: "/singapore"
   },
   {
-    labels: "Singapore  | "
+    label: "UAE |",
+    link: "/uae"
   },
   {
-    labels: "UAE  | "
+    label: "John Jacobs |",
+    link: "/john-jacobs"
   },
   {
-    labels: "John Jacobs  | "
+    label: "Aqualens |",
+    link: "/aqualens"
   },
   {
-    labels: "Aqualens  | "
+    label: "Cobrowsing |",
+    link: "/cobrowsing"
   },
   {
-    labels: "Cobrowsing  | "
+    label: "Engineering Blog |",
+    link: "/engineering-blog"
   },
   {
-    labels: "Engineering Blog  | "
+    label: "SPX Franchise |",
+    link: "/spx-franchise"
   },
   {
-    labels: "SPX Franchise  | "
-  },
-  {
-    labels: "Contact us"
+    label: "Contact us",
+    link: "/contact-us"
   }
 ];

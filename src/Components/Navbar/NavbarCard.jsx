@@ -24,19 +24,23 @@ import {
   PopoverTrigger,
   PopoverContent,
   PopoverBody
-} from "@chakra-ui/react";
+} from "@chak/react";
 
 export const NavbarCard1 = () => {
   return (
-    <Box cursor="pointer">
+    <Box cursor="pointer" style={{border:"2px solid black"}}>
       <Flex gap={2} pl={5} pt={2}>
         {NavbarDetail1.map((i, index) => (
-          <Box key={index}>
+          <a 
+             key={index}
+             href={i.url}
+             target="_blank"
+          >
             <Text fontSize="12px" _hover={{ textDecoration: "underline" }}>
-              {i.labels}
+              {i.label}
             </Text>
             <Spacer />
-          </Box>
+          </a>
         ))}
       </Flex>
     </Box>
